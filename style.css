@@ -1,0 +1,175 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E5F6FD;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Header */
+.app-header {
+  background-color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.time-container {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.time-icon {
+  margin-right: 8px;
+}
+
+.app-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.format-toggle-btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Main Content */
+.time-slots {
+  margin-top: 20px;
+  padding: 0 10px;
+  flex: 1;
+}
+
+.slot {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.slot h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.emoji-container {
+  display: flex;
+  align-items: center;
+}
+
+.placeholder {
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #999;
+  margin-right: 10px;
+  cursor: grab;
+  transition: border 0.2s ease;
+}
+
+.placeholder:hover {
+  border-color: #007BFF;
+}
+
+.add-placeholder-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Homework Button */
+.homework-btn {
+  width: 150px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #FF4D4D; /* Red */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.homework-btn.completed {
+  background-color: #4CAF50; /* Green */
+  position: relative;
+}
+
+.homework-btn .emoji {
+  font-size: 24px;
+  margin-left: 10px;
+  animation: wobble 0.5s ease;
+  display: inline-block;
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 20px;
+  }
+
+  .placeholder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .add-placeholder-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .homework-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
